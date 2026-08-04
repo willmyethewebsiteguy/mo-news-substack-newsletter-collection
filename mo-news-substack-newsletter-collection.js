@@ -129,16 +129,15 @@
     titleGroup.append(kicker, heading);
 
     var search = createElement("div", "mo-newsletters__search");
-    var label = createElement("label", "mo-newsletters__search-label", "Search the archive");
     var input = createElement("input", "mo-newsletters__search-input");
     var inputId = NAME + "-search-" + instance.id;
-    label.htmlFor = inputId;
     input.id = inputId;
     input.type = "search";
     input.placeholder = settings.searchPlaceholder;
     input.autocomplete = "off";
+    input.setAttribute("aria-label", "Search the archive");
     input.setAttribute("aria-controls", NAME + "-results-" + instance.id);
-    search.append(label, input);
+    search.append(input);
     header.append(titleGroup, search);
 
     var meta = createElement("div", "mo-newsletters__meta");
@@ -250,7 +249,7 @@
     var resultWord = total === 1 ? "newsletter" : "newsletters";
     nodes.status.textContent = state.query
       ? total + " matching " + resultWord
-      : "Archive loaded";
+      : "";
     nodes.count.textContent = "Showing " + shownStart + "–" + shownEnd + " of " + total;
     nodes.pageLabel.textContent = "Page " + state.page + " of " + pageCount;
     nodes.previous.disabled = state.page === 1;
