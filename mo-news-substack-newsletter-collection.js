@@ -7,7 +7,7 @@
   var instances = new WeakMap();
 
   var defaults = {
-    apiBase: "https://mo-news-widgets-cdn-production.willmyers.workers.dev",
+    apiBase: "https://widgets.mo.news",
     collectionId: "j579rrkbj4wte5aazer765x9x983mtk3",
     fetchLimit: 100,
     pageSize: 9,

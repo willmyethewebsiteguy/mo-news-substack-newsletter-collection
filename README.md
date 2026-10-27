@@ -14,7 +14,7 @@ This Squarespace 7.1 plugin loads the Mo News Substack archive into a searchable
 
 The public collection endpoint is:
 
-`https://mo-news-widgets-cdn-production.willmyers.workers.dev/collections/j579rrkbj4wte5aazer765x9x983mtk3.json?limit=100`
+`https://widgets.mo.news/collections/j579rrkbj4wte5aazer765x9x983mtk3.json?limit=100`
 
 The endpoint returns full records with title, summary, canonical URL, publication date, plain text, and Markdown. The current Mo News records store their image in `sourceData.enclosureUrl`, while `thumbnailUrl` is empty. The plugin supports both fields. The endpoint accepts `limit`. It ignores `offset` and does not return a total count or next cursor. The plugin therefore downloads a bounded recent archive and paginates it in the browser.
 
